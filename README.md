@@ -2,7 +2,7 @@
 A voting system that allows users to register and login with  unique voters id.
 
 ## Procedure
-Lunch your command pormpt and enter the command pip install mysql-connector-python
+Launch your command prompt and enter the command pip install mysql-connector-python
 
 Downlaod MySQL Workbench or Xampp server 
 
@@ -40,7 +40,7 @@ Create 3 other Tables
 - vice_president
 - general_secretary
 
-Create 3 colums under the newly created colums 
+Create 3 colums under the newly created Columns 
 - id
 - candidates
 - votes
