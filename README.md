@@ -40,3 +40,7 @@ Create 3 other Tables
 - vice_president
 - general_secretary
 
+Create 3 colums under the newly created colums 
+- id
+- candidates
+- votes
