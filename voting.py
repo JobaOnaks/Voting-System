@@ -162,12 +162,17 @@ Enter 5 For 500 Level: """)
 
 #Checks if the phonumber exists and if true enter a differnt phone number
     def check_phone(self):
-        cursor.execute(f"SELECT phone FROM {self.pick}")
-        self.phones = cursor.fetchone()
-        if self.phones != None:
-            while self.phone in self.phones:
-                print("Phone number already exists")
-                self.phone = input("Enter your Phone Number: ")
+        cursor.execute(f"SELECT phone FROM data_science UNION SELECT phone FROM data_analysis UNION SELECT phone FROM cyber_security UNION SELECT phone FROM javascript UNION SELECT phone FROM graphics_multimedia UNION SELECT phone FROM uiux UNION SELECT phone FROM web_development")
+        self.phones = cursor.fetchall()
+        self.possition = 0
+        self.values = []
+        if self.emails != None:
+            for i in self.phones:
+                self.values.append(i[self.possition])
+            self.possition += 1
+            while self.phone in self.values:
+                    print("Phone number already exists")
+                    self.phone = input("Enter your Phone Number: ")
             else:
                 pass
         else:
@@ -175,10 +180,15 @@ Enter 5 For 500 Level: """)
 
 #Checks if the email exists and if true enter a differnt email
     def check_email(self):
-        cursor.execute(f"SELECT Email FROM {self.pick}")
-        self.emails = cursor.fetchone()
+        cursor.execute(f"SELECT Email FROM data_science UNION SELECT Email FROM data_analysis UNION SELECT Email FROM cyber_security UNION SELECT Email FROM javascript UNION SELECT Email FROM graphics_multimedia UNION SELECT Email FROM uiux UNION SELECT Email FROM web_development")
+        self.emails = cursor.fetchall()
+        self.possition = 0
+        self.values = []
         if self.emails != None:
-            while self.email in self.emails:
+            for i in self.emails:
+                self.values.append(i[self.possition])
+            self.possition += 1
+            while self.email in self.values:
                 print("\nEmail already exists")
                 self.email = input("Enter your Email: ")
             else:
@@ -188,9 +198,14 @@ Enter 5 For 500 Level: """)
 
 #Checks if the voters id exists and if true generate a different id.
     def check_vid(self):
-        cursor.execute(f"SELECT voters_id FROM {self.pick}")
-        self.vids = cursor.fetchone()
+        cursor.execute(f"SELECT voters_id FROM data_science UNION SELECT voters_id FROM data_analysis UNION SELECT voters_id FROM cyber_security UNION SELECT voters_id FROM javascript UNION SELECT voters_id FROM graphics_multimedia UNION SELECT voters_id FROM uiux UNION SELECT voters_id FROM web_development")
+        self.vids = cursor.fetchall()
+        self.possition = 0
+        self.values = []
         if self.vids != None:
+            for i in self.emails:
+                self.values.append(i[self.possition])
+            self.possition += 1
             while self.vid in self.vids:
                 self.vid = "".join(self.letters)
             else:
@@ -200,9 +215,14 @@ Enter 5 For 500 Level: """)
 
 #Checks if the password exists and if true enter a differnt password
     def check_password(self):
-        cursor.execute(f"SELECT pword FROM {self.pick}")
-        self.pwords = cursor.fetchone()
+        cursor.execute(f"SELECT pword FROM data_science UNION SELECT pword FROM data_analysis UNION SELECT pword FROM cyber_security UNION SELECT pword FROM javascript UNION SELECT pword FROM graphics_multimedia UNION SELECT pword FROM uiux UNION SELECT pword FROM web_development")
+        self.pwords = cursor.fetchall()
+        self.possition = 0
+        self.values = []
         if self.pwords != None:
+            for i in self.emails:
+                self.values.append(i[self.possition])
+            self.possition += 1
             while self.password in self.pwords:
                 print("\nPassword already exists")
                 self.password = input("Enter desired Password.")
