@@ -82,6 +82,7 @@ Enter 3 to quit: """)
                 time.sleep(1)
                 self.phone = input("Enter your Phone Number: ")
             else:
+                self.address = input("Enter your home address: )
                 #generating a list of 4 randome upper case alphabets and 4 numbers
                 self.letters = list("".join(random.choice(string.ascii_uppercase) for i in range(4)) + "".join(random.choice(string.digits) for i in range(4)))
                 #Suhffling the randomly generated list of alphabets and numbers
@@ -99,7 +100,7 @@ Enter 3 to quit: """)
                     print("\nPassword is not matching.")
                     self.confirm_pass = input("Confirm Password: ")
                 else:
-                    cursor.execute(f"INSERT INTO {self.pick} (first_name,last_name,department,level,phone,Email,voters_id,pword,stats1,stats2,stats3) VALUES ('{self.fname}','{self.lname}','{self.choice}','{self.level}','{self.phone}','{self.email}','{self.vid}','{self.password}','Not Voted','Not Voted','Not Voted')")
+                    cursor.execute(f"INSERT INTO {self.pick} (first_name,last_name,department,level,phone,address,Email,voters_id,pword,stats1,stats2,stats3) VALUES ('{self.fname}','{self.lname}','{self.choice}','{self.level}','{self.phone}','{self.address}','{self.email}','{self.vid}','{self.password}','Not Voted','Not Voted','Not Voted')")
                     conn.commit()
                     time.sleep(1)
                     print(f"\nYour Voter's Id is {self.vid}\nYour registration is Complete.")
