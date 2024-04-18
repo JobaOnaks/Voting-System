@@ -44,3 +44,12 @@ Create 3 colums under the newly created Columns
 - id
 - candidates
 - votes
+
+This Tables will allow for your login, signup and voting to get registered within the database and smooth running
+
+### Summary
+It's a program that allows you to register then login to enter the voting forum.
+You can login and vote for any candidate and check hoe the results are going for each category
+
+### Issue
+A function than determins the end of the election is not entered yet
